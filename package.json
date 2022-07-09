@@ -1,0 +1,13 @@
+{
+	"name": "fullscreen-test",
+	"description": "Тестирование Fullscreen API для мобильных браузеров",
+	"packageManager": "yarn@3.1.1",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"start": "yarn fullscreen",
+		"fullscreen": "yarn workspaces foreach --include 'fullscreen' run start",
+		"fullscreen:build": "yarn workspaces foreach --include 'fullscreen' run build"
+	}
+}

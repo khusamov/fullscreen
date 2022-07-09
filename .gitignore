@@ -1,0 +1,11 @@
+.idea
+.yarn
+.parcel-cache
+.env.local
+
+node_modules
+dist
+build
+temp
+
+lerna-debug.log
