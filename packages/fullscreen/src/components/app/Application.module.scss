@@ -3,4 +3,10 @@
 	height: 100%;
 	position: relative;
 	background-color: white;
+	>div {
+		padding: 3%;
+	}
+	button {
+		cursor: pointer;
+	}
 }
