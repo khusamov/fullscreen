@@ -1,6 +1,6 @@
 {
   "name": "fullscreen",
-  "description": "Тестирование Fullscreen API для мобильных браузеров",
+  "description": "Тестирование Fullscreen API",
   "version": "0.0.0",
   "packageManager": "yarn@3.1.1",
   "license": "MIT",
