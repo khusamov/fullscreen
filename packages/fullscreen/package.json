@@ -16,7 +16,7 @@
   },
   "targets": {
     "github-pages": {
-      "distDir": "../../docs",
+      "distDir": "../../docs/fullscreen",
       "publicUrl": "."
     }
   },
