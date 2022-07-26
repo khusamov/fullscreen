@@ -6,7 +6,9 @@
 		"packages/*"
 	],
 	"scripts": {
-		"start": "yarn fullscreen",
+		"start": "yarn gamepad",
+		"gamepad": "yarn workspaces foreach --include 'gamepad' run start",
+		"gamepad:build": "yarn workspaces foreach --include 'gamepad' run build",
 		"fullscreen": "yarn workspaces foreach --include 'fullscreen' run start",
 		"fullscreen:build": "yarn workspaces foreach --include 'fullscreen' run build"
 	}

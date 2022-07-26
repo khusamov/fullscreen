@@ -16,7 +16,10 @@ yarn
 Gamepad API
 --------------
 
-Тестирование Gamepad API.
+Тестирование Gamepad API.  
+https://www.npmjs.com/package/gamepad  
+https://www.w3.org/TR/gamepad/#remapping  
+https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator  
 
 ```
 yarn gamepad
