@@ -1,25 +1,30 @@
+import {useFullscreen} from '../../hooks/useFullscreen'
 import {ApplicationStyle} from './Application.module.scss'
-import {useRef} from 'react'
 
 export function Application() {
-	const divRef = useRef<HTMLDivElement>(null)
-	const toggleFullScreen = async () => {
-		if (document.fullscreenElement) {
-			await document.exitFullscreen()
-		} else {
-			if (divRef.current) {
-				await divRef.current.requestFullscreen({navigationUI: 'hide'})
-			}
-		}
-	}
-	const onClick = async () => {
-		await toggleFullScreen()
-	}
+	const {fullscreenElementRef, isFullscreen, toggleFullScreen} = useFullscreen()
+	const onClick = async () => toggleFullScreen()
 	return (
-		<div ref={divRef} className={ApplicationStyle}>
-			<div>Тестирование Fullscreen API</div>
-			<div>Fullscreen Enabled = {document.fullscreenEnabled ? 'true' : 'false'}</div>
-			<div><button onClick={onClick}>Fullscreen</button></div>
+		<div ref={fullscreenElementRef} className={ApplicationStyle}>
+			<div>
+				<h1>Тестирование Fullscreen API</h1>
+				{
+					document.fullscreenEnabled
+						? (
+							<div>
+								<button onClick={onClick}>
+									{isFullscreen ? 'Отключить' : 'Включить'}
+									Fullscreen
+								</button>
+							</div>
+						)
+						: (
+							<div>
+								Fullscreen API в данном браузере не доступен.
+							</div>
+						)
+				}
+			</div>
 		</div>
 	)
 }
