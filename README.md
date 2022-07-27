@@ -3,6 +3,15 @@
 
 В данном репозитории собраны проекты для тестирования разных API браузеров на предмет их использования в проектах.
 
+Демо
+----
+
+[Gamepad API][gamepad]  
+[Fullscreen API][fullscreen]  
+
+[gamepad]: https://khusamov.github.io/web-browser-api-testing/gamepad/
+[fullscreen]: https://khusamov.github.io/web-browser-api-testing/fullscreen/
+
 Start
 -----
 
