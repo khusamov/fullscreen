@@ -1,0 +1,13 @@
+@import './Gamepad';
+
+.MetaButtonPressedStyle {
+	fill: black
+}
+
+.MetaButtonStyle {
+	stroke: $control-color;
+	stroke: {
+		width: $stroke-width;
+		opacity: 1;
+	}
+}

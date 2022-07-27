@@ -1,16 +1,19 @@
 import {LeftBumperButton} from './LeftBumperButton'
 import {LeftDirectionalPad} from './LeftDirectionalPad'
 import {LeftTriggerButton} from './LeftTriggerButton'
-import {LeftMetaButton} from './LeftMetaButton'
+import {MetaButton} from './MetaButton'
 import {Outline} from './Outline'
 import {RightBumperButton} from './RightBumperButton'
 import {RightDirectionalPad} from './RightDirectionalPad'
 import {RightTriggerButton} from './RightTriggerButton'
-import {RightMetaButton} from './RightMetaButton'
 import {Stick} from './Stick'
 
+const backButtonIndex = 8
+const startButtonIndex = 9
 const leftStickButtonIndex = 10
 const rightStickButtonIndex = 11
+const homeButtonIndex = 16
+const turboButtonIndex = 17
 
 export interface IGamepadProps {
 	gamepad: Gamepad
@@ -32,8 +35,10 @@ export function GamepadImage({gamepad}: IGamepadProps) {
 			<Stick name='left' button={gamepad.buttons[leftStickButtonIndex] || dummyButton} axes={leftStickAxes} x={113} y={160}/>
 			<LeftDirectionalPad/>
 			<RightDirectionalPad/>
-			<LeftMetaButton/>
-			<RightMetaButton/>
+			<MetaButton name='back' x={180} button={gamepad.buttons[backButtonIndex] || dummyButton}/>
+			<MetaButton name='start' x={264} button={gamepad.buttons[startButtonIndex] || dummyButton}/>
+			<MetaButton name='home' x={222} y={130} radius={15} button={gamepad.buttons[homeButtonIndex] || dummyButton}/>
+			<MetaButton name='turbo' x={222} y={180} radius={8} button={gamepad.buttons[turboButtonIndex] || dummyButton}/>
 			<LeftBumperButton/>
 			<RightBumperButton/>
 			<LeftTriggerButton/>
