@@ -5,6 +5,7 @@ import {Outline} from './Outline'
 import {RightDirectionalPad} from './RightDirectionalPad'
 import {Stick} from './Stick'
 import {TriggerButton} from './TriggerButton'
+import {GamepadImageStyle} from './GamepadImage.module.scss'
 
 const leftBumperButtonIndex = 4
 const rightBumperButtonIndex = 5
@@ -31,7 +32,7 @@ export function GamepadImage({gamepad}: IGamepadProps) {
 	const rightStickAxes: [number, number] = [gamepad.axes[2] || 0, gamepad.axes[3] || 0]
 	const leftStickAxes: [number, number] = [gamepad.axes[0] || 0, gamepad.axes[1] || 0]
 	return (
-		<svg width='300' viewBox='0 0 441 383' fill='none' xmlns='http://www.w3.org/2000/svg'>
+		<svg className={GamepadImageStyle} width='300' viewBox='0 0 441 383' fill='none' version='1.1' xmlns='http://www.w3.org/2000/svg'>
 			<Outline/>
 			<Stick name='right' button={gamepad.buttons[rightStickButtonIndex] || dummyButton} axes={rightStickAxes} x={278} y={238}/>
 			<Stick name='left' button={gamepad.buttons[leftStickButtonIndex] || dummyButton} axes={leftStickAxes} x={113} y={160}/>

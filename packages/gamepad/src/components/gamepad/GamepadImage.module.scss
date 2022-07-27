@@ -1,0 +1,12 @@
+.GamepadImageStyle {
+	// SVG по умолчанию не является блоком
+	// и потому рядом с ним невидимая строка есть.
+	// Превращаем в блок и вертикальная прокрутка исчезнет.
+	display: block;
+
+	* {
+		// https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vector-effect
+		vector-effect: non-scaling-stroke;
+	}
+
+}
