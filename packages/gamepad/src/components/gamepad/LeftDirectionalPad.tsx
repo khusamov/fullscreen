@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import {OutlineStyle, ButtonPressedStyle} from './DirectionalPad.module.scss'
+import {OutlineStyle, ButtonPressedStyle, ButtonStyle} from './DirectionalPad.module.scss'
 
 const upButtonIndex = 12
 const downButtonIndex = 13
@@ -22,15 +22,19 @@ export function LeftDirectionalPad({gamepad}: ILeftDirectionalPadProps) {
 	const leftButton = gamepad.buttons[leftButtonIndex] || dummyButton
 	const rightButton = gamepad.buttons[rightButtonIndex] || dummyButton
 	const upButtonClassName = classNames({
+		[ButtonStyle]: true,
 		[ButtonPressedStyle]: upButton.pressed
 	})
 	const downButtonClassName = classNames({
+		[ButtonStyle]: true,
 		[ButtonPressedStyle]: downButton.pressed
 	})
 	const leftButtonClassName = classNames({
+		[ButtonStyle]: true,
 		[ButtonPressedStyle]: leftButton.pressed
 	})
 	const rightButtonClassName = classNames({
+		[ButtonStyle]: true,
 		[ButtonPressedStyle]: rightButton.pressed
 	})
 	return (

@@ -8,6 +8,14 @@
 	}
 }
 
+.ButtonStyle {
+	stroke: $control-color;
+	stroke: {
+		width: $stroke-width;
+		opacity: 1;
+	}
+}
+
 .ButtonPressedStyle {
 	fill: black
 }
