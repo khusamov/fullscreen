@@ -1,0 +1,17 @@
+.GamepadGroupStyle {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.ItemStyle {
+		margin: 20px;
+		flex: 0 1 auto;
+		.TitleStyle {
+			text-align: center;
+			padding: {
+				bottom: 40px;
+			}
+		}
+	}
+}

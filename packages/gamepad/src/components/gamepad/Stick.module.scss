@@ -1,0 +1,22 @@
+@import './Gamepad';
+
+.StickStyle {
+	fill: rgba(0, 0, 0, 0);
+	stroke: $control-color;
+	stroke: {
+		width: $stroke-width;
+		opacity: 1;
+	}
+}
+
+.StickPressedStyle {
+	fill: rgba(0, 0, 0, 1);
+}
+
+.OutlineStyle {
+	stroke: $outline-color;
+	stroke: {
+		width: $stroke-width;
+		opacity: 1;
+	}
+}

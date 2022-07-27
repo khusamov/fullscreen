@@ -1,0 +1,9 @@
+@import './Gamepad';
+
+.OutlineStyle {
+	stroke: $outline-color;
+	stroke: {
+		width: $stroke-width;
+		opacity: 1;
+	}
+}
