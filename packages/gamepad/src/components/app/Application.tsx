@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import {useRequestAnimationFrame} from '../../hooks/useRequestAnimationFrame'
 import {GamepadGroup} from '../gamepad/GamepadGroup'
-import {ApplicationStyle} from './Application.module.scss'
+import {ApplicationStyle, ConnectGamepadMessage} from './Application.module.scss'
 
 function isGamepad(gamepad: Gamepad | null): gamepad is Gamepad {
 	return gamepad !== null
@@ -29,7 +29,11 @@ export function Application() {
 	})
 	return (
 		<div className={ApplicationStyle}>
-			{!hasGamepads && 'Подключите геймпад и нажмите на нем любую кнопку...'}
+			{!hasGamepads && (
+				<div className={ConnectGamepadMessage}>
+					<div>Подключите геймпад и нажмите на нем любую кнопку...</div>
+				</div>
+			)}
 			{hasGamepads && (
 				<GamepadGroup gamepads={gamepads.filter(isGamepad)}/>
 			)}
