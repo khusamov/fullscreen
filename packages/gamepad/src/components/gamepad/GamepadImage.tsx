@@ -33,8 +33,8 @@ export function GamepadImage({gamepad}: IGamepadProps) {
 			<Outline/>
 			<Stick name='right' button={gamepad.buttons[rightStickButtonIndex] || dummyButton} axes={rightStickAxes} x={278} y={238}/>
 			<Stick name='left' button={gamepad.buttons[leftStickButtonIndex] || dummyButton} axes={leftStickAxes} x={113} y={160}/>
-			<LeftDirectionalPad/>
-			<RightDirectionalPad/>
+			<LeftDirectionalPad gamepad={gamepad}/>
+			<RightDirectionalPad gamepad={gamepad}/>
 			<MetaButton name='back' x={180} button={gamepad.buttons[backButtonIndex] || dummyButton}/>
 			<MetaButton name='start' x={264} button={gamepad.buttons[startButtonIndex] || dummyButton}/>
 			<MetaButton name='home' x={222} y={130} radius={15} button={gamepad.buttons[homeButtonIndex] || dummyButton}/>
