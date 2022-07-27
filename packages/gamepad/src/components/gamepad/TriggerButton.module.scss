@@ -1,0 +1,13 @@
+@import './Gamepad';
+
+.OutlineStyle {
+	stroke: $control-color;
+	stroke: {
+		width: $stroke-width;
+		opacity: 1;
+	}
+}
+
+.ButtonPressedStyle {
+	fill: rgba(0, 0, 0, 1);
+}
